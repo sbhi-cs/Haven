@@ -65,6 +65,16 @@ func _physics_process(delta: float) -> void:
 			visible = false
 		else:
 			visible = true
+		
+		if global_position.y < 16:
+			global_position.y = 16
+		elif global_position.y > 632:
+			global_position.y = 632
+		
+		if global_position.x < 16:
+			global_position.x = 16
+		elif global_position.x > 1136:
+			global_position.x = 1136
 	
 	if fatal == true:
 		prevlives = lives

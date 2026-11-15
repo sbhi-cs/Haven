@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var speed = 150
+var prevhealth = 20
 var health = 20
 var enemybulletscene = preload("res://enemybullet.tscn")
 var shoottimer = 1
@@ -17,6 +18,10 @@ func _physics_process(delta: float) -> void:
 			bullet1.global_position = global_position
 			bullet1.velocity = speed * Vector2.from_angle(deg_to_rad(i * 45))
 			shoottimer = 4
+	
+	if prevhealth != health:
+		prevhealth = health
+		Global.score += (1500/20)
 	
 	if health <= 0:
 		Global.score += 1000

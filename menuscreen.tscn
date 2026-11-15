@@ -20,7 +20,7 @@ script = ExtResource("1_c2tj3")
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-color = Color(0.5411765, 1, 1, 1)
+color = Color(0.5411765, 0.7254902, 1, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=214984691]
 layout_mode = 0
@@ -32,13 +32,18 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1033759728]
 layout_mode = 2
-text = "title tbd"
+text = "SHOOT THE SKY"
 label_settings = SubResource("LabelSettings_1gqpt")
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=395395339]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=525362670]
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer" unique_id=1000049731]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer" unique_id=525362670]
+custom_minimum_size = Vector2(120, 0)
+custom_maximum_size = Vector2(180, -1)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_iiyva")
 theme_override_font_sizes/font_size = 40
@@ -47,11 +52,16 @@ text = "PLAY"
 [node name="Label3" type="Label" parent="CenterContainer/VBoxContainer" unique_id=977715493]
 layout_mode = 2
 
-[node name="quitbutton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=369104974]
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer" unique_id=1619735404]
+layout_mode = 2
+
+[node name="quitbutton" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer2" unique_id=369104974]
+custom_minimum_size = Vector2(120, 0)
+custom_maximum_size = Vector2(180, -1)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_iiyva")
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/quitbutton" to="." method="_on_quitbutton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/quitbutton" to="." method="_on_quitbutton_pressed"]

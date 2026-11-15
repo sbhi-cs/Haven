@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var speed = 150
+var prevhealth = 32
 var health = 32
 var enemybulletscene = preload("res://enemybullet.tscn")
 var shoottimer = 1
@@ -18,9 +19,15 @@ func _physics_process(delta: float) -> void:
 			bullet1.velocity = speed * Vector2.from_angle(deg_to_rad(i * 22.5))
 			shoottimer = 4
 	
+	if prevhealth != health:
+		prevhealth = health
+		Global.score += (3200/20)
+	
 	if health <= 0:
 		Global.score += 2500
 		Global.enemieskilled += 1
 		queue_free()
-		
+
+# MAKE CHARACTER NOT BE ABLE TO GO PAST SCREEN
+
 	move_and_slide()

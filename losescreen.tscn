@@ -1,5 +1,22 @@
 [gd_scene format=3 uid="uid://c6xc4383w1uvg"]
 
+[ext_resource type="FontFile" uid="uid://x5rf8qa8nqtm" path="res://PixelPurl.ttf" id="1_g3uia"]
+[ext_resource type="Script" uid="uid://bgtj4mbxgoi5h" path="res://losescreen.gd" id="1_u5ksb"]
+[ext_resource type="Script" uid="uid://cuupgsvt6ue46" path="res://finalscorelabel.gd" id="2_n7u8t"]
+[ext_resource type="Script" uid="uid://47je6b5nhi1f" path="res://finalheightlabel.gd" id="3_ak1a4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n7u8t"]
+font = ExtResource("1_g3uia")
+font_size = 120
+
+[sub_resource type="LabelSettings" id="LabelSettings_1gqpt"]
+font = ExtResource("1_g3uia")
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_eljyk"]
+font = ExtResource("1_g3uia")
+font_size = 60
+
 [node name="losescreen" type="Control" unique_id=1822447952]
 layout_mode = 3
 anchors_preset = 15
@@ -7,11 +24,69 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_u5ksb")
 
-[node name="Label" type="Label" parent="." unique_id=1182270256]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1315267383]
 layout_mode = 0
-offset_left = 565.0
-offset_top = 196.0
-offset_right = 605.0
-offset_bottom = 219.0
-text = "you lose lol"
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.5411765, 0.7254902, 1, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=553059035]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1769906734]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2073039500]
+layout_mode = 2
+text = "YOU LOST"
+label_settings = SubResource("LabelSettings_n7u8t")
+horizontal_alignment = 1
+
+[node name="finalscorelabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1939042120]
+layout_mode = 2
+text = "FINAL SCORE: XXXXXX"
+label_settings = SubResource("LabelSettings_1gqpt")
+horizontal_alignment = 1
+script = ExtResource("2_n7u8t")
+
+[node name="finalheightlabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2066343560]
+layout_mode = 2
+text = "HEIGHT: XXXXXM"
+label_settings = SubResource("LabelSettings_eljyk")
+horizontal_alignment = 1
+script = ExtResource("3_ak1a4")
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=63346410]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer" unique_id=585737393]
+layout_mode = 2
+
+[node name="againbutton" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer" unique_id=741710846]
+custom_minimum_size = Vector2(180, 0)
+custom_maximum_size = Vector2(240, -1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g3uia")
+theme_override_font_sizes/font_size = 40
+text = "TRY AGAIN"
+
+[node name="Label3" type="Label" parent="CenterContainer/VBoxContainer" unique_id=46457299]
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer" unique_id=231834616]
+layout_mode = 2
+
+[node name="menubutton" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer2" unique_id=3821433]
+custom_minimum_size = Vector2(220, 0)
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g3uia")
+theme_override_font_sizes/font_size = 40
+text = "BACK TO MENU"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/againbutton" to="." method="_on_againbutton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/menubutton" to="." method="_on_menubutton_pressed"]

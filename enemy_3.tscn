@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://hye6voiwdegg"]
+
+[ext_resource type="Script" uid="uid://b85bv58w7hv1o" path="res://enemy_3.gd" id="1_hukrr"]
+
+[node name="enemy3" type="CharacterBody2D" unique_id=1539214657]
+motion_mode = 1
+script = ExtResource("1_hukrr")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=2135827149]
+color = Color(0.99234384, 0.44053644, 0.40308747, 1)
+polygon = PackedVector2Array(0, 24, -32, -24, 32, -24)
+
+[node name="enemy2area" type="Area2D" parent="." unique_id=891629726]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="enemy2area" unique_id=931280609]
+polygon = PackedVector2Array(0, 24, -32, -24, 32, -24)

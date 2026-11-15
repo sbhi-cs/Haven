@@ -8,9 +8,9 @@ script = ExtResource("1_867ty")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=2135827149]
 color = Color(1, 0.53333336, 0, 1)
-polygon = PackedVector2Array(-8, 12, -16, 0, -8, -12, 8, -12, 16, 0, 8, 12)
+polygon = PackedVector2Array(-16, 24, -32, 0, -16, -24, 16, -24, 32, 0, 16, 24)
 
 [node name="enemy2area" type="Area2D" parent="." unique_id=891629726]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="enemy2area" unique_id=931280609]
-polygon = PackedVector2Array(-8, 12, -16, 0, -8, -12, 8, -12, 16, 0, 8, 12)
+polygon = PackedVector2Array(-16, 24, -32, 0, -16, -24, 16, -24, 32, 0, 16, 24)

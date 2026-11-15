@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dijk1myeqpo0a" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://cuwqdhw5bj326" path="res://character.tscn" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://ce6w8fsa6c5wu" path="res://scorelabel.gd" id="3_fc0e3"]
 [ext_resource type="FontFile" uid="uid://x5rf8qa8nqtm" path="res://PixelPurl.ttf" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://cfmcf6op3alcl" path="res://heightlabel.gd" id="4_7jktm"]
 
 [sub_resource type="Gradient" id="Gradient_feb5d"]
 offsets = PackedFloat32Array(0.6129808, 1)
@@ -11,6 +13,10 @@ colors = PackedColorArray(0.5294118, 0.80784315, 0.92156863, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_xqk0y"]
 gradient = SubResource("Gradient_feb5d")
 metadata/_snap_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_xqk0y"]
+font = ExtResource("3_feb5d")
+font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_1gqpt"]
 font = ExtResource("3_feb5d")
@@ -157,6 +163,32 @@ offset_left = 1048.0
 offset_top = 440.0
 offset_right = 1165.0
 offset_bottom = 480.0
+
+[node name="scorebox" type="ColorRect" parent="." unique_id=685741980]
+offset_left = 929.0
+offset_right = 1152.0
+offset_bottom = 58.0
+color = Color(0, 0, 0, 1)
+
+[node name="scorelabel" type="Label" parent="scorebox" unique_id=546317553]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 100.0
+offset_bottom = 28.0
+text = "SCORE = XXXXXXX"
+label_settings = SubResource("LabelSettings_xqk0y")
+script = ExtResource("3_fc0e3")
+
+[node name="heightlabel" type="Label" parent="scorebox" unique_id=1942582510]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 28.0
+offset_right = 192.0
+offset_bottom = 54.0
+text = "HEIGHT = XXXXXM"
+label_settings = SubResource("LabelSettings_xqk0y")
+script = ExtResource("4_7jktm")
 
 [node name="character" parent="." unique_id=568551937 instance=ExtResource("2_feb5d")]
 position = Vector2(548, 526)

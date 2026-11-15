@@ -11,6 +11,7 @@ motion_mode = 1
 script = ExtResource("1_webx2")
 
 [node name="bulet" type="Polygon2D" parent="." unique_id=1481754900]
+color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-12, 12, -12, -12, -4, -12, -4, 12)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1246408579]
@@ -22,6 +23,7 @@ shape = SubResource("RectangleShape2D_1gqpt")
 
 [node name="bullet2" type="Polygon2D" parent="." unique_id=550363209]
 position = Vector2(16, 0)
+color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-12, 12, -12, -12, -4, -12, -4, 12)
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=1698463158]
