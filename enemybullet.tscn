@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bgp28xt8t2nin"]
+
+[ext_resource type="Script" uid="uid://d0w1fio2w7k04" path="res://enemybullet.gd" id="1_su24e"]
+[ext_resource type="Script" uid="uid://00q7ool1xtwb" path="res://enemybulletare.gd" id="2_cjadv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1gqpt"]
+radius = 8.0
+
+[node name="enemybullet" type="CharacterBody2D" unique_id=1046474932]
+motion_mode = 1
+script = ExtResource("1_su24e")
+
+[node name="enemybulletarea" type="Area2D" parent="." unique_id=1876048742]
+script = ExtResource("2_cjadv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemybulletarea" unique_id=155507717]
+shape = SubResource("CircleShape2D_1gqpt")
+
+[connection signal="body_entered" from="enemybulletarea" to="enemybulletarea" method="_on_body_entered"]

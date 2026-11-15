@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://b4g1d7ih2mqvu"]
+
+[ext_resource type="Script" uid="uid://bmprjxrfj16hj" path="res://menuscreen.gd" id="1_c2tj3"]
+[ext_resource type="FontFile" uid="uid://x5rf8qa8nqtm" path="res://PixelPurl.ttf" id="2_iiyva"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1gqpt"]
+font = ExtResource("2_iiyva")
+font_size = 120
+
+[node name="menuscreen" type="Control" unique_id=1165452807]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c2tj3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1688846137]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.5411765, 1, 1, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=214984691]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1028874500]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1033759728]
+layout_mode = 2
+text = "title tbd"
+label_settings = SubResource("LabelSettings_1gqpt")
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=395395339]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=525362670]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_iiyva")
+theme_override_font_sizes/font_size = 40
+text = "PLAY"
+
+[node name="Label3" type="Label" parent="CenterContainer/VBoxContainer" unique_id=977715493]
+layout_mode = 2
+
+[node name="quitbutton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=369104974]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_iiyva")
+theme_override_font_sizes/font_size = 40
+text = "QUIT"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/quitbutton" to="." method="_on_quitbutton_pressed"]

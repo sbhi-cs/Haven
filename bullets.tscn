@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bfedylv8u0mp2"]
+
+[ext_resource type="Script" uid="uid://imoualjtqb5c" path="res://bullets.gd" id="1_webx2"]
+[ext_resource type="Script" uid="uid://rj2abmxuycfe" path="res://bullet2collision.gd" id="2_daqjf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gqpt"]
+size = Vector2(8, 24)
+
+[node name="bullets" type="CharacterBody2D" unique_id=1263554419]
+motion_mode = 1
+script = ExtResource("1_webx2")
+
+[node name="bulet" type="Polygon2D" parent="." unique_id=1481754900]
+polygon = PackedVector2Array(-12, 12, -12, -12, -4, -12, -4, 12)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1246408579]
+script = ExtResource("2_daqjf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=807187548]
+position = Vector2(-8, 0)
+shape = SubResource("RectangleShape2D_1gqpt")
+
+[node name="bullet2" type="Polygon2D" parent="." unique_id=550363209]
+position = Vector2(16, 0)
+polygon = PackedVector2Array(-12, 12, -12, -12, -4, -12, -4, 12)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1698463158]
+script = ExtResource("2_daqjf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2" unique_id=211447373]
+position = Vector2(8, 0)
+shape = SubResource("RectangleShape2D_1gqpt")
+
+[connection signal="area_entered" from="Area2D2" to="Area2D2" method="_on_area_entered"]
