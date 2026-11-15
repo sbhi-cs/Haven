@@ -14,4 +14,7 @@
 * J/Z to shoot and res
 * Click buttons to activate them
 
+## Credits
+* DM DOKURO for the music
+
 # Have fun!
