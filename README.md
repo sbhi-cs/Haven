@@ -23,5 +23,6 @@
 
 ## Credits
 * DM DOKURO for the music
+* Tanz for being an awesome friend :D
 
 # Have fun!
