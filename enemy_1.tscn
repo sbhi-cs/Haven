@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dararqhemb632"]
 
 [ext_resource type="Script" uid="uid://da4k56bsg8ldx" path="res://enemy_1.gd" id="1_mbxyh"]
+[ext_resource type="AudioStream" uid="uid://b6auxpgyjmiby" path="res://concrete-breaking.mp3" id="2_pjquw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6rg8l"]
 size = Vector2(32, 32)
@@ -17,3 +18,7 @@ polygon = PackedVector2Array(-16, 16, -16, -16, 16, -16, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy1area" unique_id=386011425]
 shape = SubResource("RectangleShape2D_6rg8l")
+
+[node name="diesfx" type="AudioStreamPlayer" parent="." unique_id=1025585430]
+stream = ExtResource("2_pjquw")
+volume_db = -7.0

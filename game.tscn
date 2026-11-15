@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://ce6w8fsa6c5wu" path="res://scorelabel.gd" id="3_fc0e3"]
 [ext_resource type="FontFile" uid="uid://x5rf8qa8nqtm" path="res://PixelPurl.ttf" id="3_feb5d"]
 [ext_resource type="Script" uid="uid://cfmcf6op3alcl" path="res://heightlabel.gd" id="4_7jktm"]
+[ext_resource type="AudioStream" uid="uid://beffsjf4golyw" path="res://Terraria Calamity Mod Music - 1NF3S++!0N - Theme of Crabulon - DM DOKURO.mp3" id="6_ryrav"]
 
 [sub_resource type="Gradient" id="Gradient_feb5d"]
 offsets = PackedFloat32Array(0.6129808, 1)
@@ -219,3 +220,8 @@ offset_right = 618.0
 offset_bottom = 579.0
 text = "x/10"
 label_settings = SubResource("LabelSettings_eljyk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=837405746]
+stream = ExtResource("6_ryrav")
+volume_db = -12.0
+autoplay = true

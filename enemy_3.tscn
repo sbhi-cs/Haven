@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://hye6voiwdegg"]
 
 [ext_resource type="Script" uid="uid://b85bv58w7hv1o" path="res://enemy_3.gd" id="1_hukrr"]
+[ext_resource type="AudioStream" uid="uid://b6auxpgyjmiby" path="res://concrete-breaking.mp3" id="2_dxyk6"]
 
 [node name="enemy3" type="CharacterBody2D" unique_id=1539214657]
 motion_mode = 1
@@ -14,3 +15,7 @@ polygon = PackedVector2Array(0, 24, -32, -24, 32, -24)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="enemy2area" unique_id=931280609]
 polygon = PackedVector2Array(0, 24, -32, -24, 32, -24)
+
+[node name="diesfx" type="AudioStreamPlayer" parent="." unique_id=185937209]
+stream = ExtResource("2_dxyk6")
+volume_db = -3.0

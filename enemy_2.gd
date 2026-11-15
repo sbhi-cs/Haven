@@ -6,6 +6,7 @@ var health = 32
 var enemybulletscene = preload("res://enemybullet.tscn")
 var shoottimer = 1
 
+@onready var diesfx = $diesfx
 
 func _physics_process(delta: float) -> void:
 	shoottimer -= delta
@@ -22,6 +23,7 @@ func _physics_process(delta: float) -> void:
 	if prevhealth != health:
 		prevhealth = health
 		Global.score += (3200/20)
+		diesfx.play()
 	
 	if health <= 0:
 		Global.score += 2500

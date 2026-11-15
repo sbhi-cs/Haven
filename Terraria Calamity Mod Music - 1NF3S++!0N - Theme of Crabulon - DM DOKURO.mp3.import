@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://beffsjf4golyw"
+path="res://.godot/imported/Terraria Calamity Mod Music - 1NF3S++!0N - Theme of Crabulon - DM DOKURO.mp3-53b6c6179a69a9deed389a622504cecc.mp3str"
+
+[deps]
+
+source_file="res://Terraria Calamity Mod Music - 1NF3S++!0N - Theme of Crabulon - DM DOKURO.mp3"
+dest_files=["res://.godot/imported/Terraria Calamity Mod Music - 1NF3S++!0N - Theme of Crabulon - DM DOKURO.mp3-53b6c6179a69a9deed389a622504cecc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

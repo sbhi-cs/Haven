@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cuwqdhw5bj326"]
 
 [ext_resource type="Script" uid="uid://b2374iow2wuy7" path="res://character.gd" id="1_glpr6"]
+[ext_resource type="AudioStream" uid="uid://c6kffq0013o3x" path="res://kirby-pew.mp3" id="2_pjt0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gqpt"]
 
@@ -14,3 +15,7 @@ polygon = PackedVector2Array(-16, 16, -16, -16, 16, -16, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=116144320]
 shape = SubResource("RectangleShape2D_1gqpt")
+
+[node name="pewsfx" type="AudioStreamPlayer" parent="." unique_id=2126216562]
+stream = ExtResource("2_pjt0s")
+volume_db = -5.0

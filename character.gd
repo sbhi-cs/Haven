@@ -5,6 +5,7 @@ var scene = preload("res://bullets.tscn")
 @onready var spamlabel = get_node("../spamlabel")
 @onready var timelabel = get_node("../timelabel")
 @onready var countlabel = get_node("../countlabel")
+@onready var pewsfx = $pewsfx
 
 
 var lives = 3
@@ -42,6 +43,7 @@ func _physics_process(delta: float) -> void:
 				bullet.global_position = global_position
 				shoottimer = 0.08
 				global_position.y -= -3 # he bouncing back
+				pewsfx.play()
 		shoottimer -= delta
 	
 	if iframes > 0:

@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var diesfx = $diesfx
+
 var speed = 150
 var prevhealth = 20
 var health = 20
@@ -22,6 +24,7 @@ func _physics_process(delta: float) -> void:
 	if prevhealth != health:
 		prevhealth = health
 		Global.score += (1500/20)
+		diesfx.play()
 	
 	if health <= 0:
 		Global.score += 1000
